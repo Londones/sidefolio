@@ -2,6 +2,8 @@
 import nextMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
 import rehypePrism from "@mapbox/rehype-prism";
+import pkg from "./next-i18next.config.js";
+const { i18n } = pkg;
 
 const nextConfig = {
   images: {
@@ -10,6 +12,7 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  i18n,
 };
 
 const withMDX = nextMDX({
