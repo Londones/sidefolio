@@ -18,8 +18,8 @@ export default function Home() {
         <Heading className="font-black">Heya! I&apos;m Awa</Heading>
         <Paragraph className="max-w-xl mt-4 text-foreground">
           I&apos;m <ClientSideRenderedFlipWords words={words} /> that loves
-          building things that boost people's creativity or include Lux in some
-          way.
+          building things that boost people&apos;s creativity or include Lux in
+          some way.
         </Paragraph>
         <Paragraph className="max-w-xl mt-4 text-foreground">
           I&apos;m a junior software engineer with{" "}
