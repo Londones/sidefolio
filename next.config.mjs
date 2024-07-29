@@ -7,7 +7,7 @@ const { i18n } = pkg;
 
 const nextConfig = {
   images: {
-    domains: ["images.unsplash.com", "res.cloudinary.com"],
+    domains: ["images.unsplash.com", "res.cloudinary.com", "api.microlink.io"],
   },
   experimental: {
     mdxRs: true,

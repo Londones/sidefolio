@@ -14,7 +14,6 @@ import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
 import { isMobile } from "@/lib/utils";
 import { ModeToggle } from "./ModeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export const Sidebar = () => {
   const [open, setOpen] = useState(isMobile() ? false : true);
@@ -41,7 +40,7 @@ export const Sidebar = () => {
           >
             <div className="flex-1 overflow-auto">
               <div className="w-full flex justify-center mb-5">
-                <LanguageSwitcher />
+                {/*<LanguageSwitcher />*/}
                 <ModeToggle />
               </div>
               <SidebarHeader />
@@ -134,13 +133,4 @@ const SidebarHeader = () => {
       </div>
     </div>
   );
-};
-
-export const getServerSideProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-      locale,
-    },
-  };
 };

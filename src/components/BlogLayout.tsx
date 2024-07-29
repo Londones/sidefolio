@@ -38,7 +38,7 @@ export function BlogLayout({
             type="button"
             href="/blog"
             aria-label="Go back to articles"
-            className="group mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition  "
+            className="group mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-background shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition  "
           >
             <ArrowLeftIcon className="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 d" />
           </Link>
@@ -46,9 +46,9 @@ export function BlogLayout({
           <Heading className=" py-4">{meta.title}</Heading>
           <time
             dateTime={meta.date}
-            className="flex items-center text-base text-zinc-400 "
+            className="flex items-center text-base text-muted-foreground "
           >
-            <Paragraph className=" text-zinc-700">
+            <Paragraph className=" text-muted-foreground">
               {formatDate(meta.date)}
             </Paragraph>
           </time>

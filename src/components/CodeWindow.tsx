@@ -2,7 +2,7 @@
 
 import React, { useEffect, Children, useState, useRef } from "react";
 
-// import "prism-theme-night-owl";
+//import "prism-theme-night-owl";
 import clsx from "clsx";
 
 export const CodeWindow = ({ title, children }: any) => {
@@ -12,7 +12,7 @@ export const CodeWindow = ({ title, children }: any) => {
     setIsClient(true);
   }, []);
   useEffect(() => {
-    // Prism.highlightAll();
+    //Prism.highlightAll();
   }, []);
 
   let child = Children.only(children);
@@ -59,7 +59,7 @@ export const CodeWindow = ({ title, children }: any) => {
         )}
       >
         <div className="flex justify-between items-center bg-slate-800 py-2  px-4">
-          <p className=" text-emerald-500 text-sm font-medium bg-emerald-600/[0.3] px-2 !my-0 shadow-sm">
+          <p className="!text-white text-sm font-medium bg-emerald-600/[0.3] px-2 !my-0 shadow-sm">
             {title}
           </p>
 

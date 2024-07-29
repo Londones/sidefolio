@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { toast } from "sonner";
 
 const defaultFormState = {
   name: {
@@ -18,10 +19,26 @@ const defaultFormState = {
 export const Contact = () => {
   const [formData, setFormData] = useState(defaultFormState);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    // Write your submit logic here
-    console.log(formData);
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_API_KEY,
+        name: formData.name.value,
+        email: formData.email.value,
+        message: formData.message.value,
+      }),
+    });
+    const result = await response.json();
+    if (result.success) {
+      setFormData(defaultFormState);
+      toast("Message sent successfully");
+    }
   };
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -29,7 +46,7 @@ export const Contact = () => {
         <input
           type="text"
           placeholder="Your Name"
-          className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 py-2 rounded-md text-sm text-neutral-700 w-full"
+          className="bg-muted focus:outline-none focus:ring px-2 py-2 rounded-md text-sm text-muted-foreground w-full"
           value={formData.name.value}
           onChange={(e) => {
             setFormData({
@@ -44,7 +61,7 @@ export const Contact = () => {
         <input
           type="email"
           placeholder="Your email address"
-          className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 py-2 rounded-md text-sm text-neutral-700 w-full"
+          className="bg-muted focus:outline-none focus:ring px-2 py-2 rounded-md text-sm text-muted-foreground w-full"
           value={formData.email.value}
           onChange={(e) => {
             setFormData({
@@ -61,7 +78,7 @@ export const Contact = () => {
         <textarea
           placeholder="Your Message"
           rows={10}
-          className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 mt-4 py-2 rounded-md text-sm text-neutral-700 w-full"
+          className="bg-muted focus:outline-none focus:ring px-2 mt-4 py-2 rounded-md text-sm text-muted-foreground w-full"
           value={formData.message.value}
           onChange={(e) => {
             setFormData({
@@ -75,7 +92,7 @@ export const Contact = () => {
         />
       </div>
       <button
-        className="w-full px-2 py-2 mt-4 bg-neutral-100 rounded-md font-bold text-neutral-500"
+        className="w-full px-2 py-2 mt-4 bg-muted rounded-md font-bold text-muted-foreground"
         type="submit"
       >
         Submit{" "}

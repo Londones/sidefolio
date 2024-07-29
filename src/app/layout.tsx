@@ -1,10 +1,15 @@
+"use client";
 import { Sidebar } from "@/components/Sidebar";
 import "./globals.css";
-import type { Metadata } from "next";
+import type { GetStaticProps, Metadata } from "next";
 import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import ShootingStars from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
+import { Meteors } from "@/components/ui/meteors";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,8 +18,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Awa BAH - Developer",
-  description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+  description: "Awa Bah is a developer, artist and amateur designer.",
 };
 
 export default function RootLayout({
@@ -38,6 +42,7 @@ export default function RootLayout({
               <Footer />
             </div>
           </div>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
