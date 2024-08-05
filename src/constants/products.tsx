@@ -1,5 +1,6 @@
 import tmls from "public/images/TMLS.png";
 import luxy from "public/images/luxy.png";
+import julia from "public/images/julia.png";
 
 export const products = [
   {
@@ -40,6 +41,29 @@ export const products = [
           I mostly used that project to learn Nextjs, no plans on pushing this
           project to production.
         </p>{" "}
+      </div>
+    ),
+  },
+  {
+    href: "https://github.com/Londones/fractalRenderer",
+    title: "Fractal Renderer",
+    description: "A simple fractal renderer",
+    thumbnail: julia,
+    images: [julia, julia],
+    stack: ["Golang", "Typescript", "ReactJS"],
+    slug: "fractal-renderer",
+    content: (
+      <div>
+        <p>
+          Fractal Renderer is a simple fractal renderer that I made with Golang.
+          The project was made to learn more about Golang and rewrite a school
+          project that I thought was really cool with more knowledge.
+        </p>
+        <p>
+          It leverages the speed of Golang to calculate and render the fractals
+          and the power of Websockets to display the result in real-time. It's
+          still a work in progress.
+        </p>
       </div>
     ),
   },
