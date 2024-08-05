@@ -61,8 +61,7 @@ export const products = [
         </p>
         <p>
           It leverages the speed of Golang to calculate and render the fractals
-          and the power of Websockets to display the result in real-time. It's
-          still a work in progress.
+          and the power of Websockets to display the result in real-time.
         </p>
       </div>
     ),
