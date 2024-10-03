@@ -1,6 +1,7 @@
 import tmls from "public/images/TMLS.png";
 import luxy from "public/images/luxy.png";
 import julia from "public/images/julia.png";
+import radian from "public/images/radian.png";
 
 export const products = [
   {
@@ -63,6 +64,25 @@ export const products = [
           It leverages the speed of Golang to calculate and render the fractals
           and the power of Websockets to display the result in real-time.
         </p>
+      </div>
+    ),
+  },
+  {
+    href: "https://github.com/Londones/radian.io",
+    title: "Radian.io",
+    description: "Art Review App",
+    thumbnail: radian,
+    images: [radian, radian],
+    stack: ["Python", "FastAPI", "ReactJS", "PostgreSQL"],
+    slug: "radian-io",
+    content: (
+      <div>
+        <p>
+          An art review app where artists can post their latest piece and other
+          users can review it, the goal being to help artists get better and
+          create an uplifting community.
+        </p>
+        <p>Created as a way to learn Python and FastAPI.</p>
       </div>
     ),
   },
