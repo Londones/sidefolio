@@ -18,14 +18,11 @@ export default function Home() {
         <Heading className="font-black">Heya! I&apos;m Awa</Heading>
         <Paragraph className="max-w-xl mt-4 text-foreground">
           I&apos;m <ClientSideRenderedFlipWords words={words} /> that loves
-          building things that boost people&apos;s creativity or include Lux in
-          some way.
+          building things that boost people&apos;s creativity.
         </Paragraph>
         <Paragraph className="max-w-xl mt-4 text-foreground">
-          I&apos;m a junior software engineer with{" "}
-          <Highlight className="text-muted-foreground">
-            2 years of experience
-          </Highlight>{" "}
+          I&apos;m a fullstack software engineer with{" "}
+          <Highlight className="text-muted-foreground">experience</Highlight>{" "}
           working in the HR industry.
         </Paragraph>
         <Heading

@@ -2,8 +2,39 @@ import tmls from "public/images/TMLS.png";
 import luxy from "public/images/luxy.png";
 import julia from "public/images/julia.png";
 import radian from "public/images/radian.png";
+import starfire from "public/images/starfire.png";
 
 export const products = [
+  {
+    href: "https://starfire.lol",
+    title: "Starfire",
+    description: "A bingo editor",
+    thumbnail: starfire,
+    images: [starfire, starfire],
+    stack: [
+      "NextJS 15",
+      "Typescript",
+      "Tailwindcss",
+      "Prisma",
+      "PostgreSQL",
+      "ReactJS 18",
+    ],
+    slug: "starfire",
+    content: (
+      <div>
+        <p>
+          Developed a NextJS-based bingo making app that allows users to create
+          and customize bingo cards with personalized backgrounds, titles, and
+          fonts. Automatically deployed on Vercel through GitHub Actions, it
+          uses AWS S3 bucket for image management.
+        </p>
+        <p>
+          The project is open source and you can find it on{" "}
+          <a href="https://github.com/Londones/bingo-maker">GitHub</a>.
+        </p>
+      </div>
+    ),
+  },
   {
     href: "https://londones.github.io/too-many-lux-skins/",
     title: "Too Many Lux Skins",
@@ -42,47 +73,6 @@ export const products = [
           I mostly used that project to learn Nextjs, no plans on pushing this
           project to production.
         </p>{" "}
-      </div>
-    ),
-  },
-  {
-    href: "https://github.com/Londones/fractalRenderer",
-    title: "Fractal Renderer",
-    description: "A simple fractal renderer",
-    thumbnail: julia,
-    images: [julia, julia],
-    stack: ["Golang", "Typescript", "ReactJS"],
-    slug: "fractal-renderer",
-    content: (
-      <div>
-        <p>
-          Fractal Renderer is a simple fractal renderer that I made with Golang.
-          The project was made to learn more about Golang and rewrite a school
-          project that I thought was really cool with more knowledge.
-        </p>
-        <p>
-          It leverages the speed of Golang to calculate and render the fractals
-          and the power of Websockets to display the result in real-time.
-        </p>
-      </div>
-    ),
-  },
-  {
-    href: "https://github.com/Londones/radian.io",
-    title: "Radian.io",
-    description: "Art Review App",
-    thumbnail: radian,
-    images: [radian, radian],
-    stack: ["Python", "FastAPI", "ReactJS", "PostgreSQL"],
-    slug: "radian-io",
-    content: (
-      <div>
-        <p>
-          An art review app where artists can post their latest piece and other
-          users can review it, the goal being to help artists get better and
-          create an uplifting community.
-        </p>
-        <p>Created as a way to learn Python and FastAPI.</p>
       </div>
     ),
   },
